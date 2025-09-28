@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav button {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        nav button:hover {
+            background: #4CAF50;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Personal Web Page</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('profile')">Profile</button>
+    <button onclick="showSection('academics')">Academics</button>
+    <button onclick="showSection('contacts')">Contacts</button>
+</nav>
+
+<div class="content">
+    <div id="profile" class="section">
+        <h2>Profile</h2>
+        <p>Name: Sangam Singh</p>
+        <p>Institution: IIIT Manipur</p>
+        <p>Hobbies: Coding, Reading, Gaming</p>
+    </div>
+
+    <div id="academics" class="section hidden">
+        <h2>Academics</h2>
+        <p>Course: B.Tech Computer Science</p>
+        <p>Year: 2nd Year</p>
+        <p>CGPA: 9.1/10</p>
+    </div>
+
+    <div id="contacts" class="section hidden">
+        <h2>Contacts</h2>
+        <p>Email: sangam@example.com</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+        <p>LinkedIn: linkedin.com/in/sangam</p>
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(sec => sec.classList.add('hidden'));
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
